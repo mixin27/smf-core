@@ -1,22 +1,27 @@
-<!-- 
+<!--
 This README describes the package. If you publish this package to pub.dev,
 this README's contents appear on the landing page for your package.
 
 For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages). 
+[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
 
 For general information about developing packages, see the Dart guide for
 [creating packages](https://dart.dev/guides/libraries/create-library-packages)
 and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages). 
+[developing packages and plugins](https://flutter.dev/developing-packages).
 -->
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+A core package that provides some reusable widgets, text, extensions and utils, etc.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+- Ready to use paginated `freezed` domain model.
+- Ready to use some network exceptions.
+- `SizeConfig` for responsive.
+- Some extensions for `BuildContext`, `DateTime`, `Dio` and `String`.
+- Some helper classes and functions
+- Logger with some colors and types.
+- Some common used `rivperpod` providers for instances.
 
 ## Getting started
 
@@ -25,15 +30,12 @@ start using the package.
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
+To use this package, all you have to do is to import.
 
 ```dart
-const like = 'sample';
+import 'package:smf_core/smf_core.dart';
 ```
 
 ## Additional information
 
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+Package repository link is [here](https://github.com/mixin27/smf-core)

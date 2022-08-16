@@ -1,3 +1,3 @@
-## 0.0.1
+## 0.0.1 - 16/08/2022
 
-* TODO: Describe initial release.
+- First patch version release.
