@@ -12,3 +12,4 @@ export 'shared/shared.dart';
 export 'presentation/widgets/widgets.dart';
 
 export 'vimeo/feat_vimeo.dart';
+export 'youtube/feat_youtube.dart';

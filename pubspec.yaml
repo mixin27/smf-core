@@ -19,6 +19,7 @@ dependencies:
   url_launcher: ^6.1.5
   xml: ^6.1.0
   dartz: ^0.10.1
+  youtube_explode_dart: ^1.12.0
 
 dev_dependencies:
   flutter_test:

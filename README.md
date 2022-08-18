@@ -25,8 +25,7 @@ A core package that provides some reusable widgets, text, extensions and utils, 
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+You do not need any requirements right now.
 
 ## Usage
 
@@ -35,6 +34,46 @@ To use this package, all you have to do is to import.
 ```dart
 import 'package:smf_core/smf_core.dart';
 ```
+
+### Vimeo
+
+To get list of `vimeo` video links
+
+```dart
+final Dio dio = Dio();
+final VimeoRemoteService service = VimeoRemoteService(dio);
+final VimeoRepository repository = VimeoRepository(service);
+
+final failureOrSuccess = await _repository.getVimeoVideoLinks(videoId);
+
+failureOrSuccess.fold(
+    (failure) {
+        // do something with failure
+    },
+    (links) {
+        // do something with links
+    },
+);
+```
+
+### YouTube
+
+To get list of `youtube` video links
+
+```dart
+final urls = await YtHelper.getVideoQualityUrlsFromYoutube(
+    'https://www.youtube.com/watch?v=gYNTcgZVcWw',
+);
+
+// Create resolutions map
+Map<String, String> resolutionsMap = {};
+for (var link in urls.reversed) {
+    String processedKey = link.quality.toString();
+    resolutionsMap[processedKey] = link.url;
+}
+```
+
+And you can use above `urls` adn `resolutionsMap` within your player.
 
 ## Additional information
 
