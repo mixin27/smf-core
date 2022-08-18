@@ -10,3 +10,5 @@ export 'infrastructure/response_info_dto.dart';
 export 'shared/shared.dart';
 
 export 'presentation/widgets/widgets.dart';
+
+export 'vimeo/feat_vimeo.dart';
