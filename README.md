@@ -44,7 +44,7 @@ final Dio dio = Dio();
 final VimeoRemoteService service = VimeoRemoteService(dio);
 final VimeoRepository repository = VimeoRepository(service);
 
-final failureOrSuccess = await _repository.getVimeoVideoLinks(videoId);
+final failureOrSuccess = await repository.getVimeoVideoLinks(videoId);
 
 failureOrSuccess.fold(
     (failure) {
