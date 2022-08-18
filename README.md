@@ -22,6 +22,8 @@ A core package that provides some reusable widgets, text, extensions and utils, 
 - Some helper classes and functions
 - Logger with some colors and types.
 - Some common used `rivperpod` providers for instances.
+- `Vimeo` video links fetching via `id`
+- `YouTube` video links fetching via `link` or `id`.
 
 ## Getting started
 
