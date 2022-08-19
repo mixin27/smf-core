@@ -58,8 +58,11 @@ class _HomePageState extends State<HomePage> {
     final urlInfo = await vimeoService.fetchVimeoInfoFromUrl(
       url: 'https://vimeo.com/29474908',
     );
+    final videoId = urlInfo.when(
+      data: (info) => info.videoId.toString(),
+    );
     final response = await vimeoService.fetchAllVimeoVideoLinks(
-      videoId: urlInfo.data.videoId.toString(),
+      videoId: videoId,
     );
 
     setState(() {
@@ -71,14 +74,28 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: ListView.builder(
-        itemCount: youtubeUrls.length,
+        // YouTube
+        // itemCount: youtubeUrls.length,
+
+        // Vimeo
+        itemCount: vimeoVideLinks.length,
         itemBuilder: (context, index) {
-          final YoutubeVideoQualityUrl ytVideoUrl =
-              youtubeUrls.elementAt(index);
+          // YouTube
+          // final YoutubeVideoQualityUrl ytVideoUrl =
+          //     youtubeUrls.elementAt(index);
+
+          // Vimeo
+          final VimeoVideoLinkDto vimeoVideoLink =
+              vimeoVideLinks.elementAt(index);
 
           return ListTile(
-            title: Text(ytVideoUrl.url),
-            subtitle: Text('${ytVideoUrl.quality}'),
+            // YouTube
+            // title: Text(ytVideoUrl.url),
+            // subtitle: Text(ytVideoUrl.quality.toString()),
+
+            // Vimeo
+            title: Text(vimeoVideoLink.url),
+            subtitle: Text(vimeoVideoLink.quality),
           );
         },
       ),
