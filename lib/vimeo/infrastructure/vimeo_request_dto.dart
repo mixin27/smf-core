@@ -6,6 +6,7 @@ import 'vimeo_files_dto.dart';
 part 'vimeo_request_dto.freezed.dart';
 part 'vimeo_request_dto.g.dart';
 
+/// Vimeo request data object.
 @freezed
 class VimeoRequestDto with _$VimeoRequestDto {
   const VimeoRequestDto._();

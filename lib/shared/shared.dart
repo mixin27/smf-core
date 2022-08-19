@@ -4,10 +4,12 @@ export 'extensions/contextx.dart';
 export 'extensions/datetimex.dart';
 export 'extensions/diox.dart';
 export 'extensions/stringx.dart';
+export 'extensions/intx.dart';
 
 export 'helper/api_utils.dart';
 export 'helper/datetime_utils.dart';
 export 'helper/global_utils.dart';
+export 'helper/image_utils.dart';
 
 export 'logging/logger.dart';
 

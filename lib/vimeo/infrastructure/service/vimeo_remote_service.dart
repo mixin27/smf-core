@@ -2,11 +2,18 @@ import 'dart:convert';
 import 'package:dio/dio.dart';
 import 'package:smf_core/smf_core.dart';
 
+/// Remote service for `Vimeo` api.
 class VimeoRemoteService {
   final Dio _dio;
 
   VimeoRemoteService(this._dio);
 
+  /// Get vimeo video links, resolutions and other information object
+  /// by calling `https://player.vimeo.com/video/[videoId]/config` api.
+  ///
+  /// [vimeoId] - the identifier value of vimeo video url.
+  ///
+  /// Throw [VimeoApiException] when error occurred.
   Future<VimeoResponse<List<VimeoVideoLinkDto>>> fetchAllVimeoVideoLinks({
     required String? videoId,
   }) async {
@@ -53,6 +60,13 @@ class VimeoRemoteService {
     }
   }
 
+  /// Get vimeo video url data such as `video_id`, `thumbnail` and
+  /// other information objects by calling
+  /// `https://vimeo.com/api/oembed.json?url=[url]` api.
+  ///
+  /// [url] - Vimeo video url.
+  ///
+  /// Throw [VimeoApiException] when error occurred.
   Future<VimeoResponse<VimeoLinkInfoDto>> fetchVimeoInfoFromUrl({
     required String url,
   }) async {

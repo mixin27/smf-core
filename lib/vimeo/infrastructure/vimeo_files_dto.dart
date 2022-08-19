@@ -6,6 +6,7 @@ import 'vimeo_video_link_dto.dart';
 part 'vimeo_files_dto.freezed.dart';
 part 'vimeo_files_dto.g.dart';
 
+/// Vimeo files data object.
 @freezed
 class VimeoFilesDto with _$VimeoFilesDto {
   const VimeoFilesDto._();

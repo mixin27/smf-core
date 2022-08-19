@@ -1,3 +1,9 @@
+## 0.0.4
+
+- Refactor `YouTube` service.
+- Add `image_utils` for compressing and resizing.
+- Add `int` extensions.
+
 ## 0.0.3
 
 - Getting vimeo video id from url.

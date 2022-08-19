@@ -3,6 +3,7 @@ import 'package:flutter/foundation.dart';
 
 part 'vimeo_video_link.freezed.dart';
 
+/// `domain` layer model for vimeo video link data object.
 @freezed
 class VimeoVideoLink with _$VimeoVideoLink {
   const VimeoVideoLink._();

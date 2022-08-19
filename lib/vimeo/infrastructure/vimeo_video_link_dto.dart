@@ -5,6 +5,7 @@ import 'package:smf_core/vimeo/feat_vimeo.dart';
 part 'vimeo_video_link_dto.freezed.dart';
 part 'vimeo_video_link_dto.g.dart';
 
+/// Vimeo video link data object.
 @freezed
 class VimeoVideoLinkDto with _$VimeoVideoLinkDto {
   const VimeoVideoLinkDto._();

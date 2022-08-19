@@ -4,6 +4,7 @@ import 'package:flutter/foundation.dart';
 part 'vimeo_error_response_dto.freezed.dart';
 part 'vimeo_error_response_dto.g.dart';
 
+/// Vimeo error response data object.
 @freezed
 class VimeoErrorResponseDto with _$VimeoErrorResponseDto {
   const VimeoErrorResponseDto._();

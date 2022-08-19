@@ -6,6 +6,7 @@ import 'vimeo_request_dto.dart';
 part 'vimeo_config_dto.freezed.dart';
 part 'vimeo_config_dto.g.dart';
 
+/// Vimeo configuration data object.
 @freezed
 class VimeoConfigDto with _$VimeoConfigDto {
   const VimeoConfigDto._();

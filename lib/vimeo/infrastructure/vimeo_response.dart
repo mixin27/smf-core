@@ -3,6 +3,7 @@ import 'package:flutter/foundation.dart';
 
 part 'vimeo_response.freezed.dart';
 
+/// Data wrapper class for vimeo api response.
 @freezed
 class VimeoResponse<T> with _$VimeoResponse<T> {
   const VimeoResponse._();

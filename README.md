@@ -68,7 +68,8 @@ final videLinks = await remoteResponse.when(
 To get list of `youtube` video links
 
 ```dart
-final urls = await YtHelper.getVideoQualityUrlsFromYoutube(
+final youtubeService = YoutubeService();
+final urls = await youtubeService.getVideoQualityUrlsFromYoutube(
     'https://www.youtube.com/watch?v=gYNTcgZVcWw',
 );
 
