@@ -4,9 +4,7 @@ import 'package:smf_core/smf_core.dart';
 
 /// Remote service for `Vimeo` api.
 class VimeoRemoteService {
-  final Dio _dio;
-
-  VimeoRemoteService(this._dio);
+  final Dio _dio = Dio();
 
   /// Get vimeo video links, resolutions and other information object
   /// by calling `https://player.vimeo.com/video/[videoId]/config` api.
