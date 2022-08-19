@@ -54,8 +54,7 @@ final videoId = await response.when(
 To get list of `vimeo` video links
 
 ```dart
-final Dio dio = Dio();
-final VimeoRemoteService service = VimeoRemoteService(dio);
+final VimeoRemoteService service = VimeoRemoteService();
 
 final response = await service.fetchAllVimeoVideoLinks(videoId);
 final videLinks = await remoteResponse.when(
