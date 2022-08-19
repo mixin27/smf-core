@@ -1,3 +1,7 @@
+## 0.0.3
+
+- Getting vimeo video id from url.
+
 ## 0.0.2
 
 - Add `vimeo` feature to get video links via vimeo id.

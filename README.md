@@ -39,22 +39,27 @@ import 'package:smf_core/smf_core.dart';
 
 ### Vimeo
 
+To get video id from vimeo url
+
+```dart
+final Dio dio = Dio();
+final VimeoRemoteService service = VimeoRemoteService(dio);
+
+final response = await service.fetchVimeoInfoFromUrl(url: url);
+final videoId = await response.when(
+    data: (info) => info.videoId.toString(),
+);
+```
+
 To get list of `vimeo` video links
 
 ```dart
 final Dio dio = Dio();
 final VimeoRemoteService service = VimeoRemoteService(dio);
-final VimeoRepository repository = VimeoRepository(service);
 
-final failureOrSuccess = await repository.getVimeoVideoLinks(videoId);
-
-failureOrSuccess.fold(
-    (failure) {
-        // do something with failure
-    },
-    (links) {
-        // do something with links
-    },
+final response = await service.fetchAllVimeoVideoLinks(videoId);
+final videLinks = await remoteResponse.when(
+    data: (videos) => videos,
 );
 ```
 
