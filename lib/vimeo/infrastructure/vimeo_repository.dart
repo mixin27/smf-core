@@ -23,4 +23,22 @@ class VimeoRepository {
       return left(VimeoFailure.api(e.message));
     }
   }
+
+  Future<Either<VimeoFailure, String>> getVimeoIdFromUrl({
+    required String url,
+  }) async {
+    try {
+      final remoteResponse = await _service.fetchVimeoInfoFromUrl(
+        url: url,
+      );
+
+      return right(
+        await remoteResponse.when(
+          data: (info) => info.videoId.toString(),
+        ),
+      );
+    } on VimeoApiException catch (e) {
+      return left(VimeoFailure.api(e.message));
+    }
+  }
 }

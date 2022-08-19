@@ -11,3 +11,4 @@ export 'infrastructure/extensions.dart';
 export 'infrastructure/vimeo_exceptions.dart';
 export 'infrastructure/vimeo_repository.dart';
 export 'infrastructure/service/vimeo_remote_service.dart';
+export 'infrastructure/vimeo_link_info_dto.dart';
