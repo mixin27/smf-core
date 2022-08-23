@@ -82,7 +82,7 @@ for (var link in urls.reversed) {
 }
 ```
 
-And you can use above `urls` adn `resolutionsMap` within your player.
+And you can use above `urls` and `resolutionsMap` within your player.
 
 ## Additional information
 
