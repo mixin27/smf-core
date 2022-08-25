@@ -1,3 +1,8 @@
+## 0.0.5
+
+- Generic union class `DomainResult<T>`
+- Image placeholder widget
+
 ## 0.0.4
 
 - Refactor `YouTube` service.
