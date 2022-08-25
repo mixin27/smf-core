@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
-part of 'network_result.dart';
+part of 'domain_result.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -15,60 +15,62 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
-mixin _$Result<T> {
+mixin _$DomainResult<T> {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() noConnection,
-    required TResult Function(T data) withData,
+    required TResult Function(T result) result,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? noConnection,
-    TResult Function(T data)? withData,
+    TResult Function(T result)? result,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? noConnection,
-    TResult Function(T data)? withData,
+    TResult Function(T result)? result,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_NoConnection<T> value) noConnection,
-    required TResult Function(_Data<T> value) withData,
+    required TResult Function(_Result<T> value) result,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(_NoConnection<T> value)? noConnection,
-    TResult Function(_Data<T> value)? withData,
+    TResult Function(_Result<T> value)? result,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_NoConnection<T> value)? noConnection,
-    TResult Function(_Data<T> value)? withData,
+    TResult Function(_Result<T> value)? result,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ResultCopyWith<T, $Res> {
-  factory $ResultCopyWith(Result<T> value, $Res Function(Result<T>) then) =
-      _$ResultCopyWithImpl<T, $Res>;
+abstract class $DomainResultCopyWith<T, $Res> {
+  factory $DomainResultCopyWith(
+          DomainResult<T> value, $Res Function(DomainResult<T>) then) =
+      _$DomainResultCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
-class _$ResultCopyWithImpl<T, $Res> implements $ResultCopyWith<T, $Res> {
-  _$ResultCopyWithImpl(this._value, this._then);
+class _$DomainResultCopyWithImpl<T, $Res>
+    implements $DomainResultCopyWith<T, $Res> {
+  _$DomainResultCopyWithImpl(this._value, this._then);
 
-  final Result<T> _value;
+  final DomainResult<T> _value;
   // ignore: unused_field
-  final $Res Function(Result<T>) _then;
+  final $Res Function(DomainResult<T>) _then;
 }
 
 /// @nodoc
@@ -80,7 +82,7 @@ abstract class _$$_NoConnectionCopyWith<T, $Res> {
 
 /// @nodoc
 class __$$_NoConnectionCopyWithImpl<T, $Res>
-    extends _$ResultCopyWithImpl<T, $Res>
+    extends _$DomainResultCopyWithImpl<T, $Res>
     implements _$$_NoConnectionCopyWith<T, $Res> {
   __$$_NoConnectionCopyWithImpl(
       _$_NoConnection<T> _value, $Res Function(_$_NoConnection<T>) _then)
@@ -99,13 +101,14 @@ class _$_NoConnection<T>
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'Result<$T>.noConnection()';
+    return 'DomainResult<$T>.noConnection()';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties.add(DiagnosticsProperty('type', 'Result<$T>.noConnection'));
+    properties
+        .add(DiagnosticsProperty('type', 'DomainResult<$T>.noConnection'));
   }
 
   @override
@@ -121,7 +124,7 @@ class _$_NoConnection<T>
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() noConnection,
-    required TResult Function(T data) withData,
+    required TResult Function(T result) result,
   }) {
     return noConnection();
   }
@@ -130,7 +133,7 @@ class _$_NoConnection<T>
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? noConnection,
-    TResult Function(T data)? withData,
+    TResult Function(T result)? result,
   }) {
     return noConnection?.call();
   }
@@ -139,7 +142,7 @@ class _$_NoConnection<T>
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? noConnection,
-    TResult Function(T data)? withData,
+    TResult Function(T result)? result,
     required TResult orElse(),
   }) {
     if (noConnection != null) {
@@ -152,7 +155,7 @@ class _$_NoConnection<T>
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_NoConnection<T> value) noConnection,
-    required TResult Function(_Data<T> value) withData,
+    required TResult Function(_Result<T> value) result,
   }) {
     return noConnection(this);
   }
@@ -161,7 +164,7 @@ class _$_NoConnection<T>
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(_NoConnection<T> value)? noConnection,
-    TResult Function(_Data<T> value)? withData,
+    TResult Function(_Result<T> value)? result,
   }) {
     return noConnection?.call(this);
   }
@@ -170,7 +173,7 @@ class _$_NoConnection<T>
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_NoConnection<T> value)? noConnection,
-    TResult Function(_Data<T> value)? withData,
+    TResult Function(_Result<T> value)? result,
     required TResult orElse(),
   }) {
     if (noConnection != null) {
@@ -180,34 +183,37 @@ class _$_NoConnection<T>
   }
 }
 
-abstract class _NoConnection<T> implements Result<T> {
+abstract class _NoConnection<T> implements DomainResult<T> {
   const factory _NoConnection() = _$_NoConnection<T>;
 }
 
 /// @nodoc
-abstract class _$$_DataCopyWith<T, $Res> {
-  factory _$$_DataCopyWith(_$_Data<T> value, $Res Function(_$_Data<T>) then) =
-      __$$_DataCopyWithImpl<T, $Res>;
-  $Res call({T data});
+abstract class _$$_ResultCopyWith<T, $Res> {
+  factory _$$_ResultCopyWith(
+          _$_Result<T> value, $Res Function(_$_Result<T>) then) =
+      __$$_ResultCopyWithImpl<T, $Res>;
+  $Res call({T result});
 }
 
 /// @nodoc
-class __$$_DataCopyWithImpl<T, $Res> extends _$ResultCopyWithImpl<T, $Res>
-    implements _$$_DataCopyWith<T, $Res> {
-  __$$_DataCopyWithImpl(_$_Data<T> _value, $Res Function(_$_Data<T>) _then)
-      : super(_value, (v) => _then(v as _$_Data<T>));
+class __$$_ResultCopyWithImpl<T, $Res>
+    extends _$DomainResultCopyWithImpl<T, $Res>
+    implements _$$_ResultCopyWith<T, $Res> {
+  __$$_ResultCopyWithImpl(
+      _$_Result<T> _value, $Res Function(_$_Result<T>) _then)
+      : super(_value, (v) => _then(v as _$_Result<T>));
 
   @override
-  _$_Data<T> get _value => super._value as _$_Data<T>;
+  _$_Result<T> get _value => super._value as _$_Result<T>;
 
   @override
   $Res call({
-    Object? data = freezed,
+    Object? result = freezed,
   }) {
-    return _then(_$_Data<T>(
-      data == freezed
-          ? _value.data
-          : data // ignore: cast_nullable_to_non_nullable
+    return _then(_$_Result<T>(
+      result == freezed
+          ? _value.result
+          : result // ignore: cast_nullable_to_non_nullable
               as T,
     ));
   }
@@ -215,69 +221,69 @@ class __$$_DataCopyWithImpl<T, $Res> extends _$ResultCopyWithImpl<T, $Res>
 
 /// @nodoc
 
-class _$_Data<T> with DiagnosticableTreeMixin implements _Data<T> {
-  const _$_Data(this.data);
+class _$_Result<T> with DiagnosticableTreeMixin implements _Result<T> {
+  const _$_Result(this.result);
 
   @override
-  final T data;
+  final T result;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'Result<$T>.withData(data: $data)';
+    return 'DomainResult<$T>.result(result: $result)';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties
-      ..add(DiagnosticsProperty('type', 'Result<$T>.withData'))
-      ..add(DiagnosticsProperty('data', data));
+      ..add(DiagnosticsProperty('type', 'DomainResult<$T>.result'))
+      ..add(DiagnosticsProperty('result', result));
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Data<T> &&
-            const DeepCollectionEquality().equals(other.data, data));
+            other is _$_Result<T> &&
+            const DeepCollectionEquality().equals(other.result, result));
   }
 
   @override
   int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(result));
 
   @JsonKey(ignore: true)
   @override
-  _$$_DataCopyWith<T, _$_Data<T>> get copyWith =>
-      __$$_DataCopyWithImpl<T, _$_Data<T>>(this, _$identity);
+  _$$_ResultCopyWith<T, _$_Result<T>> get copyWith =>
+      __$$_ResultCopyWithImpl<T, _$_Result<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() noConnection,
-    required TResult Function(T data) withData,
+    required TResult Function(T result) result,
   }) {
-    return withData(data);
+    return result(this.result);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? noConnection,
-    TResult Function(T data)? withData,
+    TResult Function(T result)? result,
   }) {
-    return withData?.call(data);
+    return result?.call(this.result);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? noConnection,
-    TResult Function(T data)? withData,
+    TResult Function(T result)? result,
     required TResult orElse(),
   }) {
-    if (withData != null) {
-      return withData(data);
+    if (result != null) {
+      return result(this.result);
     }
     return orElse();
   }
@@ -286,39 +292,39 @@ class _$_Data<T> with DiagnosticableTreeMixin implements _Data<T> {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_NoConnection<T> value) noConnection,
-    required TResult Function(_Data<T> value) withData,
+    required TResult Function(_Result<T> value) result,
   }) {
-    return withData(this);
+    return result(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(_NoConnection<T> value)? noConnection,
-    TResult Function(_Data<T> value)? withData,
+    TResult Function(_Result<T> value)? result,
   }) {
-    return withData?.call(this);
+    return result?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_NoConnection<T> value)? noConnection,
-    TResult Function(_Data<T> value)? withData,
+    TResult Function(_Result<T> value)? result,
     required TResult orElse(),
   }) {
-    if (withData != null) {
-      return withData(this);
+    if (result != null) {
+      return result(this);
     }
     return orElse();
   }
 }
 
-abstract class _Data<T> implements Result<T> {
-  const factory _Data(final T data) = _$_Data<T>;
+abstract class _Result<T> implements DomainResult<T> {
+  const factory _Result(final T result) = _$_Result<T>;
 
-  T get data;
+  T get result;
   @JsonKey(ignore: true)
-  _$$_DataCopyWith<T, _$_Data<T>> get copyWith =>
+  _$$_ResultCopyWith<T, _$_Result<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }

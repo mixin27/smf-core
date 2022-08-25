@@ -2,6 +2,7 @@ library smf_core;
 
 export 'domain/fresh.dart';
 export 'domain/paginated_data.dart';
+export 'domain/domain_result.dart';
 
 export 'infrastructure/network_exceptions.dart';
 export 'infrastructure/network_result.dart';
