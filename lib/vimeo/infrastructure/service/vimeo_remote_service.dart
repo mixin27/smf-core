@@ -34,14 +34,14 @@ class VimeoRemoteService {
         );
       }
     } on DioError catch (e) {
-      Logger.logError('VimeoRemoteService', e);
+      Logger.e('VimeoRemoteService', e);
       if (e.isNoConnectionError) {
         throw VimeoApiException(
           code: e.response?.statusCode,
           message: 'No internet connection.',
         );
       } else if (e.error != null) {
-        Logger.logError(
+        Logger.e(
           'VimeoRemoteService',
           'errorResponse = ${e.response?.data}',
         );
@@ -70,7 +70,7 @@ class VimeoRemoteService {
   }) async {
     final link = 'https://vimeo.com/api/oembed.json?url=$url';
 
-    Logger.logInfo(
+    Logger.e(
       'VimeoRemoteService',
       'vimeoLink = $link',
     );
@@ -93,14 +93,14 @@ class VimeoRemoteService {
         );
       }
     } on DioError catch (e) {
-      Logger.logError('VimeoRemoteService', e);
+      Logger.e('VimeoRemoteService', e);
       if (e.isNoConnectionError) {
         throw VimeoApiException(
           code: e.response?.statusCode,
           message: 'No internet connection.',
         );
       } else if (e.error != null) {
-        Logger.logError(
+        Logger.e(
           'VimeoRemoteService',
           'errorResponse = ${e.response?.data}',
         );

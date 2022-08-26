@@ -26,12 +26,12 @@ class YoutubeService {
       return YtHelper.sortQualityVideoUrls(urls);
     } catch (error) {
       if (error.toString().contains('XMLHttpRequest')) {
-        Logger.logInfo(
+        Logger.i(
           'YtHelper',
           '(INFO) To play youtube video in WEB, Please enable CORS in your browser',
         );
       }
-      Logger.logError(
+      Logger.e(
         'YtHelper',
         '===== YOUTUBE API ERROR: $error ==========',
       );

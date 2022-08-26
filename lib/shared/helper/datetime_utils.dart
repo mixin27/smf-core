@@ -1,6 +1,17 @@
+import 'package:intl/intl.dart';
+
 /// Utility functions for [DateTime]
 class DateTimeUtil {
   DateTimeUtil._();
+
+  /// Convert [date] to [String] according to [pattern].
+  static String getFormattedDateString(
+    DateTime date, {
+    String pattern = 'dd-MM-yyyy',
+  }) {
+    final formatter = DateFormat(pattern);
+    return formatter.format(date);
+  }
 
   /// Find the first date of the week which contains the provided date.
   ///
