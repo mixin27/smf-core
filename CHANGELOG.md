@@ -1,3 +1,8 @@
+## 0.0.6
+
+- Modified `Logger`
+- Add utility function to covert `datetime` to formatted date string.
+
 ## 0.0.5
 
 - Generic union class `DomainResult<T>`
