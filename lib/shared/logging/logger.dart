@@ -57,11 +57,11 @@ class Logger {
   /// Log level [Level.debug]
   @Deprecated('Use Logger.d()')
   static void debug(String tag, Object? object) {
-    log(tag, object, level: Level.error);
+    log(tag, object, level: Level.debug);
   }
 
   static void d(String tag, Object? object) {
-    print(tag, object, level: Level.error);
+    print(tag, object, level: Level.debug);
   }
 
   /// Print logging message if in debug or profile mode
