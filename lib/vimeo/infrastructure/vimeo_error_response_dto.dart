@@ -9,7 +9,9 @@ part 'vimeo_error_response_dto.g.dart';
 class VimeoErrorResponseDto with _$VimeoErrorResponseDto {
   const VimeoErrorResponseDto._();
   const factory VimeoErrorResponseDto({
-    @JsonKey(name: 'message') required String message,
+    @JsonKey(name: 'message') String? message,
+    @JsonKey(name: 'error') String? error,
+    @JsonKey(name: 'developer_message') String? developerMessage,
   }) = _VimeoErrorResponseDto;
 
   factory VimeoErrorResponseDto.fromJson(Map<String, dynamic> json) =>

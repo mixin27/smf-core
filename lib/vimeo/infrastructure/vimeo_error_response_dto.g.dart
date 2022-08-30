@@ -9,11 +9,15 @@ part of 'vimeo_error_response_dto.dart';
 _$_VimeoErrorResponseDto _$$_VimeoErrorResponseDtoFromJson(
         Map<String, dynamic> json) =>
     _$_VimeoErrorResponseDto(
-      message: json['message'] as String,
+      message: json['message'] as String?,
+      error: json['error'] as String?,
+      developerMessage: json['developer_message'] as String?,
     );
 
 Map<String, dynamic> _$$_VimeoErrorResponseDtoToJson(
         _$_VimeoErrorResponseDto instance) =>
     <String, dynamic>{
       'message': instance.message,
+      'error': instance.error,
+      'developer_message': instance.developerMessage,
     };

@@ -109,7 +109,9 @@ class VimeoRemoteService {
             : const VimeoErrorResponseDto(message: 'Unknown Error!');
         throw VimeoApiException(
           code: e.response?.statusCode,
-          message: errorResponse.message,
+          message: errorResponse.message ??
+              errorResponse.error ??
+              errorResponse.developerMessage,
         );
       } else {
         rethrow;
