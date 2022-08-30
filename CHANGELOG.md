@@ -1,3 +1,8 @@
+## 0.0.7
+
+- Fixed Loggin debug message color wrong.
+- Fixed vimeo error response messag null.
+
 ## 0.0.6
 
 - Modified `Logger`
