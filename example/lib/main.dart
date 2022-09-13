@@ -54,7 +54,7 @@ class _HomePageState extends State<HomePage> {
   }
 
   _getVimeoVideoUrls() async {
-    final vimeoService = VimeoRemoteService();
+    final vimeoService = VimeoService();
     final urlInfo = await vimeoService.fetchVimeoInfoFromUrl(
       url: 'https://vimeo.com/29474908',
     );

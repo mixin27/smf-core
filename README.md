@@ -42,7 +42,7 @@ import 'package:smf_core/smf_core.dart';
 To get video id from vimeo url
 
 ```dart
-final VimeoRemoteService service = VimeoRemoteService();
+final VimeoService service = VimeoService();
 
 final response = await service.fetchVimeoInfoFromUrl(
     url: 'https://vimeo.com/29474908',
@@ -55,7 +55,7 @@ final videoId = await response.when(
 To get list of `vimeo` video links
 
 ```dart
-final vimeoService = VimeoRemoteService();
+final vimeoService = VimeoService();
 final response = await vimeoService.fetchAllVimeoVideoLinks(
     videoId: videoId,
 );
