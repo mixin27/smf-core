@@ -8,8 +8,8 @@ part of 'response_info_dto.dart';
 
 ResponseInfoDto _$ResponseInfoDtoFromJson(Map<String, dynamic> json) =>
     ResponseInfoDto(
-      code: json['Code'] as String,
-      message: json['Message'] as String,
+      code: stringFromJson(json['Code']),
+      message: stringFromJson(json['Message']),
     );
 
 Map<String, dynamic> _$ResponseInfoDtoToJson(ResponseInfoDto instance) =>
