@@ -1,21 +1,47 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:json_annotation/json_annotation.dart';
 
-part 'response_info_dto.freezed.dart';
+part 'response_info_dto.g.dart';
 
 /// Data transfer object for `responseInfo` object from `SOAP APIs` response.
 ///
 /// This object always response the same.
-@freezed
-class ResponseInfoDto with _$ResponseInfoDto {
-  // You need private constructor when additional codes are added.
-  const ResponseInfoDto._();
+@JsonSerializable()
+class ResponseInfoDto {
+  @JsonKey(name: 'Code')
+  final String code;
+  @JsonKey(name: 'Message')
+  final String message;
 
-  const factory ResponseInfoDto({
-    @JsonKey(name: 'Code') required String code,
-    @JsonKey(name: 'Message') required String message,
-  }) = _ResponseInfoDto;
+  ResponseInfoDto({
+    required this.code,
+    required this.message,
+  });
 
-  // Additional code for json_serializable methods - fromJson, toJson
   factory ResponseInfoDto.fromJson(Map<String, dynamic> json) =>
       _$ResponseInfoDtoFromJson(json);
+
+  Map<String, dynamic> toJson() => _$ResponseInfoDtoToJson(this);
+
+  ResponseInfoDto copyWith({
+    String? code,
+    String? message,
+  }) {
+    return ResponseInfoDto(
+      code: code ?? this.code,
+      message: message ?? this.message,
+    );
+  }
+
+  @override
+  String toString() => 'ResponseInfoDto(code: $code, message: $message)';
+
+  @override
+  bool operator ==(covariant ResponseInfoDto other) {
+    if (identical(this, other)) return true;
+
+    return other.code == code && other.message == message;
+  }
+
+  @override
+  int get hashCode => code.hashCode ^ message.hashCode;
 }
