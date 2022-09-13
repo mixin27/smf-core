@@ -1,4 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
+import 'package:smf_core/smf_core.dart';
 
 part 'response_info_dto.g.dart';
 
@@ -7,9 +8,9 @@ part 'response_info_dto.g.dart';
 /// This object always response the same.
 @JsonSerializable()
 class ResponseInfoDto {
-  @JsonKey(name: 'Code')
+  @JsonKey(name: 'Code', fromJson: stringFromJson)
   final String code;
-  @JsonKey(name: 'Message')
+  @JsonKey(name: 'Message', fromJson: stringFromJson)
   final String message;
 
   ResponseInfoDto({
