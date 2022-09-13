@@ -1,3 +1,7 @@
+## 1.0.1
+
+- Fixed fromJson and toJson is not defined in `ResponseInfoDto`.
+
 ## 1.0.0
 
 - Major version release.
