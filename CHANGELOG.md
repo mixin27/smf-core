@@ -1,3 +1,10 @@
+## 1.0.0
+
+- Major version release.
+- Added more reusable widgets.
+- Added more extension and helper functions.
+- SharedPreferences helper functions.
+
 ## 0.0.7
 
 - Fixed Loggin debug message color wrong.
