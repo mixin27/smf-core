@@ -220,7 +220,11 @@ extension DateTimeX on DateTime {
     return formatter.format(this);
   }
 
+  /// Subtract [days] from [DateTime].
   DateTime getSubtratedDate(int days) => subtract(Duration(days: days));
+
+  /// Add [days] to [DateTime].
+  DateTime getAddedDate(int days) => add(Duration(days: days));
 }
 
 /// Extensions of [DioError].
