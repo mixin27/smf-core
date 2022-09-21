@@ -37,10 +37,13 @@ export 'src/utils/url_launcher_helpers.dart';
 export 'src/utils/image_helpers.dart';
 export 'src/utils/datetime_helpers.dart';
 
+// services
 export 'src/services/youtube_service.dart';
 export 'src/services/vimeo_service.dart';
 
+// repositories
 export 'src/repositories/vimeo_repository.dart';
+export 'src/repositories/i_credential_storage.dart';
 
 // widgets
 export 'src/widgets/empty_aware_widget.dart';

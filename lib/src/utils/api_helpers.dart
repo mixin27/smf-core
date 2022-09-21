@@ -6,9 +6,12 @@ class ApiUtils {
   static const String keyContentType = 'Content-type';
   static const String keyAuthorization = 'Authorization';
 
+  static const String tokenTypeBearer = 'Bearer';
+
   static const String formUrlEncoded = 'application/x-www-form-urlencoded';
   static const String applicationJson = 'application/json';
   static const String textXml = 'text/xml; charset=utf-8';
+  static const String acceptAll = '*/*';
 
   // APIs response keys
   static const String keyResponseInfo = 'ResponseInfo';
