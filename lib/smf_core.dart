@@ -53,6 +53,7 @@ export 'src/widgets/smf_container.dart';
 export 'src/widgets/smf_dividers.dart';
 export 'src/widgets/active_dot_indicator.dart';
 export 'src/widgets/section_title.dart';
+export 'src/widgets/flavor_bannder.dart';
 
 // button
 export 'src/widgets/button/smf_buttons.dart';
