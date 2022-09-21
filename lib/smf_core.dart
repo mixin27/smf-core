@@ -32,22 +32,40 @@ export 'src/services/vimeo_service.dart';
 
 export 'src/repositories/vimeo_repository.dart';
 
+// widgets
 export 'src/widgets/empty_aware_widget.dart';
 export 'src/widgets/organization_widget.dart';
 export 'src/widgets/hide_keyboard.dart';
 export 'src/widgets/smf_container.dart';
 export 'src/widgets/smf_dividers.dart';
+export 'src/widgets/active_dot_indicator.dart';
+
+// button
 export 'src/widgets/button/smf_buttons.dart';
 export 'src/widgets/button/smf_state_button.dart';
+
+// placeholder
 export 'src/widgets/placeholder/image_placeholder.dart';
 export 'src/widgets/placeholder/smf_error_placeholder.dart';
 export 'src/widgets/placeholder/smf_no_data_image.dart';
+
+// text field
 export 'src/widgets/text_field/otp_intput.dart';
 export 'src/widgets/text_field/money_masked_text_controller.dart';
+
+// badge
 export 'src/widgets/badge/smf_status_badge.dart';
 export 'src/widgets/badge/smf_status_box.dart';
+
+// date
 export 'src/widgets/date/smf_date_switcher.dart';
 export 'src/widgets/date/smf_single_date.dart';
 export 'src/widgets/date/smf_single_date_chooser.dart';
+
+// modal
 export 'src/widgets/modal/modal_dismissible.dart';
 export 'src/widgets/modal/smf_modal_bottom_sheet.dart';
+
+// image
+export 'src/widgets/image/smf_image_placeholder.dart';
+export 'src/widgets/image/smf_cached_network_image.dart';
