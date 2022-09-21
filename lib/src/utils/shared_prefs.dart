@@ -5,7 +5,7 @@ import 'package:smf_core/smf_core.dart';
 
 late SharedPreferences sharedPreferences;
 
-Future<void> initialize() async {
+Future<void> initializePrefs() async {
   sharedPreferences = await SharedPreferences.getInstance();
   Logger.d('Initialize', 'Initialization of shared_prefs success');
 }
