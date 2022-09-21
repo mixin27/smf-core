@@ -1,3 +1,12 @@
+## 1.0.2
+
+- Common usable widgets
+- Specific response body DTO models
+- Common credential model and credential storage interface
+- ImagePlaceholder and ErrorPlaceholder widgets
+- EmptyAwareWidget for String, SectionTitle, ActiveDotIndicator, ProgressLoading overlay, common CachedNetworkImage, AlertDialog with icon and month chooser widgets
+- More DateTime helper functions
+
 ## 1.0.1
 
 - Fixed fromJson and toJson is not defined in `ResponseInfoDto`.
