@@ -33,7 +33,7 @@
     "**/Thumbs.db": true,
     "**/.gitkeep": false,
     "**/*.freezed.dart": false,
-    "**/*.g.dart": true,
+    "**/*.g.dart": false,
     "**/*.gr.dart": false
   },
   "explorerExclude.backup": {},

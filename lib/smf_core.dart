@@ -3,6 +3,7 @@ library smf_core;
 export 'src/exceptions/network_exceptions.dart';
 export 'src/exceptions/vimeo_exceptions.dart';
 
+// models
 export 'src/models/domain_fresh.dart';
 export 'src/models/domain_result.dart';
 export 'src/models/network_result.dart';
@@ -18,6 +19,11 @@ export 'src/models/vimeo/vimeo_link_info_dto.dart';
 export 'src/models/vimeo/vimeo_error_response_dto.dart';
 export 'src/models/vimeo/vimeo_failure.dart';
 export 'src/models/vimeo/vimeo_video_link.dart';
+
+// rest
+export 'src/models/rest/credential.dart';
+export 'src/models/rest/data_body.dart';
+export 'src/models/rest/error_body.dart';
 
 export 'src/utils/size_config.dart';
 export 'src/utils/smf_extensions.dart';
