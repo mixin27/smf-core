@@ -5,11 +5,13 @@ class SmfErrorPlaceholder extends StatelessWidget {
     Key? key,
     this.message,
     this.icon,
+    this.buttonText,
     this.onPressed,
   }) : super(key: key);
 
   final String? message;
   final IconData? icon;
+  final String? buttonText;
   final VoidCallback? onPressed;
 
   @override
@@ -24,19 +26,20 @@ class SmfErrorPlaceholder extends StatelessWidget {
         ),
         const SizedBox(height: 10),
         Text(
-          message ?? 'Something went wrong.',
+          message ?? '',
           style: Theme.of(context).textTheme.titleMedium,
         ),
-        const SizedBox(height: 10),
-        ElevatedButton(
-          onPressed: onPressed,
-          style: ElevatedButton.styleFrom(
-            padding: const EdgeInsets.symmetric(
-              horizontal: 35,
+        if (onPressed != null) const SizedBox(height: 10),
+        if (onPressed != null)
+          ElevatedButton(
+            onPressed: onPressed,
+            style: ElevatedButton.styleFrom(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 35,
+              ),
             ),
+            child: Text(buttonText ?? 'Try Again'),
           ),
-          child: const Text('Try Again'),
-        ),
       ],
     );
   }
