@@ -43,6 +43,7 @@ export 'src/widgets/hide_keyboard.dart';
 export 'src/widgets/smf_container.dart';
 export 'src/widgets/smf_dividers.dart';
 export 'src/widgets/active_dot_indicator.dart';
+export 'src/widgets/section_title.dart';
 
 // button
 export 'src/widgets/button/smf_buttons.dart';
@@ -65,6 +66,7 @@ export 'src/widgets/badge/smf_status_box.dart';
 export 'src/widgets/date/smf_date_switcher.dart';
 export 'src/widgets/date/smf_single_date.dart';
 export 'src/widgets/date/smf_single_date_chooser.dart';
+export 'src/widgets/date/smf_month_chooser.dart';
 
 // modal
 export 'src/widgets/modal/modal_dismissible.dart';
@@ -73,3 +75,10 @@ export 'src/widgets/modal/smf_modal_bottom_sheet.dart';
 // image
 export 'src/widgets/image/smf_image_placeholder.dart';
 export 'src/widgets/image/smf_cached_network_image.dart';
+
+// dialog
+export 'src/widgets/dialog/smf_dialog_box.dart';
+export 'src/widgets/dialog/smf_alert_dialog.dart';
+
+// loading
+export 'src/widgets/loading/smf_progress_loading.dart';
