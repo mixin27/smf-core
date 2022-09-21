@@ -22,6 +22,7 @@ dependencies:
   youtube_explode_dart: ^1.12.0
   flutter_native_image: ^0.0.6+1
   shared_preferences: ^2.0.15
+  cached_network_image: ^3.2.2
 
 dev_dependencies:
   flutter_test:
@@ -37,8 +38,8 @@ dev_dependencies:
 # The following section is specific to Flutter packages.
 flutter:
   # To add assets to your package, add an assets section, like this:
-  # assets:
-  #   - assets/images/
+  assets:
+    - assets/images/
   #   - images/a_dot_ham.jpeg
   #
   # For details regarding assets in packages, see
