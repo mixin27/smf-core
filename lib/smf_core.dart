@@ -26,6 +26,10 @@ export 'src/utils/smf_logger.dart';
 export 'src/utils/youtube_helpers.dart';
 export 'src/utils/shared_prefs.dart';
 export 'src/utils/dialog_utils.dart';
+export 'src/utils/api_helpers.dart';
+export 'src/utils/url_launcher_helpers.dart';
+export 'src/utils/image_helpers.dart';
+export 'src/utils/datetime_helpers.dart';
 
 export 'src/services/youtube_service.dart';
 export 'src/services/vimeo_service.dart';

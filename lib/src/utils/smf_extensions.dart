@@ -219,6 +219,8 @@ extension DateTimeX on DateTime {
     final formatter = DateFormat(pattern);
     return formatter.format(this);
   }
+
+  DateTime getSubtratedDate(int days) => subtract(Duration(days: days));
 }
 
 /// Extensions of [DioError].
