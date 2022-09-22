@@ -2,49 +2,85 @@ import 'package:flutter/material.dart';
 
 enum DialogAnimationType { curveEaseInOutBack, scale }
 
+/// Show dialog with animation and future delay awareness.
 void showAnimatedDialog(
   BuildContext context, {
-  required Widget dialog,
-  DialogAnimationType animType = DialogAnimationType.curveEaseInOutBack,
-  bool barrierDismissible = false,
+  bool barrierDismissible = true,
   String? barrierLabel,
-  Color barrierColor = const Color(0x80000000),
+  Color? barrierColor,
   Duration transitionDuration = const Duration(milliseconds: 200),
+  DialogAnimationType animType = DialogAnimationType.curveEaseInOutBack,
+  required Widget dialog,
+  bool shouldDelay = false,
 }) {
-  Future.delayed(Duration.zero).then((value) {
-    showGeneralDialog(
-      context: context,
-      pageBuilder: (context, anim1, anim2) => dialog,
+  if (shouldDelay) {
+    Future.delayed(Duration.zero).then((value) {
+      showDialogWithAnimation(
+        context,
+        dialog: dialog,
+        barrierDismissible: barrierDismissible,
+        barrierLabel: barrierLabel,
+        barrierColor: barrierColor,
+        transitionDuration: transitionDuration,
+        animType: animType,
+      );
+    });
+  } else {
+    showDialogWithAnimation(
+      context,
+      dialog: dialog,
       barrierDismissible: barrierDismissible,
       barrierLabel: barrierLabel,
       barrierColor: barrierColor,
       transitionDuration: transitionDuration,
-      transitionBuilder: (context, anim1, anim2, child) {
-        if (animType == DialogAnimationType.curveEaseInOutBack) {
-          final curveValue = Curves.easeInOutBack.transform(anim1.value) - 1.0;
-          return Transform(
-            transform: Matrix4.translationValues(0.0, curveValue * 200, 0.0),
-            child: Opacity(
-              opacity: anim1.value,
-              child: dialog,
-            ),
-          );
-        } else if (animType == DialogAnimationType.scale) {
-          return Transform.scale(
-            scale: anim1.value,
-            child: Opacity(
-              opacity: anim1.value,
-              child: dialog,
-            ),
-          );
-        } else {
-          return dialog;
-        }
-      },
+      animType: animType,
     );
-  });
+  }
 }
 
+/// Show dialog with some animation
+void showDialogWithAnimation(
+  BuildContext context, {
+  bool barrierDismissible = true,
+  String? barrierLabel,
+  Color? barrierColor,
+  Duration transitionDuration = const Duration(milliseconds: 200),
+  DialogAnimationType animType = DialogAnimationType.curveEaseInOutBack,
+  required Widget dialog,
+}) {
+  showGeneralDialog(
+    context: context,
+    pageBuilder: (context, anim1, anim2) => dialog,
+    barrierDismissible: barrierDismissible,
+    barrierLabel: barrierLabel,
+    barrierColor: barrierColor ?? const Color(0x80000000),
+    transitionDuration: transitionDuration,
+    transitionBuilder: (context, anim1, anim2, child) {
+      if (animType == DialogAnimationType.curveEaseInOutBack) {
+        final curveValue = Curves.easeInOutBack.transform(anim1.value) - 1.0;
+        return Transform(
+          transform: Matrix4.translationValues(0.0, curveValue * 200, 0.0),
+          child: Opacity(
+            opacity: anim1.value,
+            child: dialog,
+          ),
+        );
+      } else if (animType == DialogAnimationType.scale) {
+        return Transform.scale(
+          scale: anim1.value,
+          child: Opacity(
+            opacity: anim1.value,
+            child: dialog,
+          ),
+        );
+      } else {
+        return dialog;
+      }
+    },
+  );
+}
+
+/// Show [TimeOfDay] picker with `easeInOutBack` curve animation.
 Future<TimeOfDay?> showAnimatedTimePicker({
   required BuildContext context,
   required TimeOfDay initialTime,
@@ -74,7 +110,7 @@ Future<TimeOfDay?> showAnimatedTimePicker({
     onEntryModeChanged: onEntryModeChanged,
   );
 
-  return showGeneralDialog(
+  return showGeneralDialog<TimeOfDay?>(
     context: context,
     pageBuilder: (context, a1, a2) => dialog,
     useRootNavigator: useRootNavigator,
@@ -94,7 +130,7 @@ Future<TimeOfDay?> showAnimatedTimePicker({
   );
 }
 
-/// Totally copy from [showDatePicker] and added `easeInOutBack` animation.
+/// Show [DateTime] picker with `easeInOutBack` curve animation.
 Future<DateTime?> showAnimatedDatePicker({
   required BuildContext context,
   required DateTime initialDate,
@@ -119,10 +155,6 @@ Future<DateTime?> showAnimatedDatePicker({
   TextInputType? keyboardType,
   Offset? anchorPoint,
 }) async {
-  // assert(context != null);
-  // assert(initialDate != null);
-  // assert(firstDate != null);
-  // assert(lastDate != null);
   initialDate = DateUtils.dateOnly(initialDate);
   firstDate = DateUtils.dateOnly(firstDate);
   lastDate = DateUtils.dateOnly(lastDate);
@@ -142,9 +174,6 @@ Future<DateTime?> showAnimatedDatePicker({
     selectableDayPredicate == null || selectableDayPredicate(initialDate),
     'Provided initialDate $initialDate must satisfy provided selectableDayPredicate.',
   );
-  // assert(initialEntryMode != null);
-  // assert(useRootNavigator != null);
-  // assert(initialDatePickerMode != null);
   assert(debugCheckHasMaterialLocalizations(context));
 
   Widget dialog = DatePickerDialog(
@@ -180,7 +209,7 @@ Future<DateTime?> showAnimatedDatePicker({
     );
   }
 
-  return showGeneralDialog<DateTime>(
+  return showGeneralDialog<DateTime?>(
     context: context,
     pageBuilder: (context, a1, a2) => dialog,
     useRootNavigator: useRootNavigator,
