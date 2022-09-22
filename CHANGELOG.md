@@ -1,3 +1,8 @@
+## 1.0.3
+
+- Remove ImageUtils
+- Add more ApiUtils values
+
 ## 1.0.2
 
 - Common usable widgets
