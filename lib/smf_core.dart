@@ -34,7 +34,6 @@ export 'src/utils/shared_prefs.dart';
 export 'src/utils/dialog_utils.dart';
 export 'src/utils/api_helpers.dart';
 export 'src/utils/url_launcher_helpers.dart';
-export 'src/utils/image_helpers.dart';
 export 'src/utils/datetime_helpers.dart';
 
 // services
