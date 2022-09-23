@@ -9,6 +9,7 @@ class SmfCachedNetworkImage extends StatelessWidget {
   const SmfCachedNetworkImage({
     super.key,
     required this.url,
+    this.placeholderImage,
     this.height,
     this.width,
     this.fit,
@@ -19,6 +20,7 @@ class SmfCachedNetworkImage extends StatelessWidget {
   });
 
   final String url;
+  final String? placeholderImage;
   final double? height;
   final double? width;
   final BoxFit? fit;
@@ -31,6 +33,7 @@ class SmfCachedNetworkImage extends StatelessWidget {
   Widget build(BuildContext context) {
     if (url.isEmpty) {
       return SmfImagePlaceholder(
+        assetImageUrl: placeholderImage,
         height: height,
         width: width,
         fit: fit,
@@ -46,6 +49,7 @@ class SmfCachedNetworkImage extends StatelessWidget {
         color: color,
         alignment: alignment as Alignment? ?? Alignment.center,
         errorWidget: (_, s, d) => SmfImagePlaceholder(
+          assetImageUrl: placeholderImage,
           height: height,
           width: width,
           fit: fit,
@@ -55,6 +59,7 @@ class SmfCachedNetworkImage extends StatelessWidget {
         placeholder: (_, s) {
           if (!usePlaceholderIfUrlEmpty) return const SizedBox();
           return SmfImagePlaceholder(
+            assetImageUrl: placeholderImage,
             height: height,
             width: width,
             fit: fit,

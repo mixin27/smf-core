@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class SmfImagePlaceholder extends StatelessWidget {
   const SmfImagePlaceholder({
     super.key,
+    this.assetImageUrl,
     this.height,
     this.width,
     this.fit,
@@ -10,6 +11,7 @@ class SmfImagePlaceholder extends StatelessWidget {
     this.radius,
   });
 
+  final String? assetImageUrl;
   final double? height;
   final double? width;
   final BoxFit? fit;
@@ -22,7 +24,7 @@ class SmfImagePlaceholder extends StatelessWidget {
       clipBehavior: Clip.antiAliasWithSaveLayer,
       borderRadius: BorderRadius.all(Radius.circular(radius ?? 8.0)),
       child: Image.asset(
-        'assets/images/placeholder.jpg',
+        assetImageUrl ?? 'assets/images/placeholder.jpg',
         height: height,
         width: width,
         fit: fit ?? BoxFit.cover,
