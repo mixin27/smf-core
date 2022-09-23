@@ -35,6 +35,7 @@ export 'src/utils/dialog_utils.dart';
 export 'src/utils/api_helpers.dart';
 export 'src/utils/url_launcher_helpers.dart';
 export 'src/utils/datetime_helpers.dart';
+export 'src/utils/image_utils.dart';
 
 // services
 export 'src/services/youtube_service.dart';
