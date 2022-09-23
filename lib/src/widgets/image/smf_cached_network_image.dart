@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
@@ -60,6 +62,18 @@ class SmfCachedNetworkImage extends StatelessWidget {
             radius: radius,
           );
         },
+      );
+    } else if (url.startsWith('/data/')) {
+      return ClipRRect(
+        borderRadius: BorderRadius.all(Radius.circular(radius ?? 8.0)),
+        clipBehavior: Clip.antiAliasWithSaveLayer,
+        child: Image.file(
+          File(url),
+          height: height,
+          width: width,
+          fit: fit,
+          alignment: alignment ?? Alignment.center,
+        ),
       );
     } else {
       return ClipRRect(

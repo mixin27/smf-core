@@ -5,7 +5,7 @@ enum DialogAnimationType { curveEaseInOutBack, scale }
 /// Show dialog with animation and future delay awareness.
 void showAnimatedDialog(
   BuildContext context, {
-  bool barrierDismissible = true,
+  bool barrierDismissible = false,
   String? barrierLabel,
   Color? barrierColor,
   Duration transitionDuration = const Duration(milliseconds: 200),
@@ -41,7 +41,7 @@ void showAnimatedDialog(
 /// Show dialog with some animation
 void showDialogWithAnimation(
   BuildContext context, {
-  bool barrierDismissible = true,
+  bool barrierDismissible = false,
   String? barrierLabel,
   Color? barrierColor,
   Duration transitionDuration = const Duration(milliseconds: 200),
