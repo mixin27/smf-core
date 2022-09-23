@@ -1,3 +1,7 @@
+## 1.0.5
+
+- Custom image asset path can be added to ImagePlaceholder widget.
+
 ## 1.0.4
 
 - Add ImageUtils for picking single image from image source.

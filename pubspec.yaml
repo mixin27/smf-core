@@ -1,6 +1,6 @@
 name: smf_core
 description: A core package that provides some reusable widgets, text, extensions and utils, etc.
-version: 1.0.4
+version: 1.0.5
 homepage: https://github.com/mixin27/smf-core
 
 environment:
