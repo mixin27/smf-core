@@ -85,6 +85,12 @@ export 'src/widgets/modal/smf_modal_bottom_sheet.dart';
 // image
 export 'src/widgets/image/smf_image_placeholder.dart';
 export 'src/widgets/image/smf_cached_network_image.dart';
+export 'src/widgets/image/image_picker_button.dart';
+export 'src/widgets/image/image_picker_preview.dart';
+export 'src/widgets/image/image_upload_button.dart';
+export 'src/widgets/image/image_upload_preview_item.dart';
+export 'src/widgets/image/multi_images_preview.dart';
+export 'src/widgets/image/multi_upload_images_preview.dart';
 
 // dialog
 export 'src/widgets/dialog/smf_dialog_box.dart';
