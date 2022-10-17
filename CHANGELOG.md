@@ -1,3 +1,8 @@
+## 1.0.6
+
+- Upgrade dependencies.
+- ImagePicker utils and simple preview widgets
+
 ## 1.0.5
 
 - Custom image asset path can be added to ImagePlaceholder widget.

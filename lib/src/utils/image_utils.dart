@@ -113,7 +113,7 @@ class ImageUtils {
         maxWidth: maxWidth,
         imageQuality: imageQuality,
       );
-      if (pickedImages == null) return [];
+      // if (pickedImages == null) return [];
 
       final List<File> pickedImageFiles = [];
       for (var image in pickedImages) {
